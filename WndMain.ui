@@ -1,0 +1,1121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>WndMain</class>
+ <widget class="QMainWindow" name="WndMain">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1254</width>
+    <height>819</height>
+   </rect>
+  </property>
+  <property name="acceptDrops">
+   <bool>true</bool>
+  </property>
+  <property name="windowTitle">
+   <string>PredictX</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout_7">
+    <item row="0" column="1">
+     <widget class="QGroupBox" name="groupBox">
+      <property name="title">
+       <string>Config</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_6">
+       <item row="0" column="0">
+        <widget class="QLabel" name="lblFragmentLength">
+         <property name="text">
+          <string>FragmentLength</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QSpinBox" name="spnFragmentLength">
+         <property name="value">
+          <number>5</number>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="lblTemplateLength">
+         <property name="text">
+          <string>TemplateLength</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QSpinBox" name="spnTemplateLength">
+         <property name="value">
+          <number>5</number>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QPushButton" name="btnCalculation">
+         <property name="text">
+          <string>ScoreCalculation</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="lblPredictionLength">
+         <property name="text">
+          <string>PredictionLength</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0">
+        <widget class="QPushButton" name="btnPrediction">
+         <property name="text">
+          <string>Prediction</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="0">
+        <widget class="QPushButton" name="btnDrawPlot">
+         <property name="text">
+          <string>DrawPlot</string>
+         </property>
+        </widget>
+       </item>
+       <item row="13" column="0">
+        <spacer name="verticalSpacer_4">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="2" column="1">
+        <widget class="QDoubleSpinBox" name="spnScoreFiltering">
+         <property name="minimum">
+          <double>0.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>1.000000000000000</double>
+         </property>
+         <property name="singleStep">
+          <double>0.010000000000000</double>
+         </property>
+         <property name="value">
+          <double>0.990000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QSpinBox" name="spnPredictionLength">
+         <property name="value">
+          <number>1</number>
+         </property>
+        </widget>
+       </item>
+       <item row="14" column="0">
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>TestTerm</string>
+         </property>
+        </widget>
+       </item>
+       <item row="14" column="1">
+        <widget class="QSpinBox" name="spnTestTerm">
+         <property name="value">
+          <number>1</number>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="lblMinS">
+         <property name="text">
+          <string>MinS</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QDoubleSpinBox" name="spnMinS">
+         <property name="maximum">
+          <double>10000.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>10.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="0">
+        <widget class="QPushButton" name="btnDB">
+         <property name="text">
+          <string>DB</string>
+         </property>
+        </widget>
+       </item>
+       <item row="10" column="0">
+        <widget class="QPushButton" name="btnBackTest">
+         <property name="text">
+          <string>BackTest</string>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="0">
+        <widget class="QLabel" name="lblTerm">
+         <property name="text">
+          <string>TermHigh/Low</string>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="1">
+        <widget class="QSpinBox" name="spnTerm">
+         <property name="value">
+          <number>25</number>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="0">
+        <widget class="QLabel" name="lblMA">
+         <property name="text">
+          <string>MA</string>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="1">
+        <widget class="QSpinBox" name="spnMA">
+         <property name="value">
+          <number>5</number>
+         </property>
+        </widget>
+       </item>
+       <item row="11" column="0">
+        <widget class="QPushButton" name="btnSimulation">
+         <property name="text">
+          <string>Simulation</string>
+         </property>
+        </widget>
+       </item>
+       <item row="12" column="0">
+        <widget class="QDateEdit" name="dedtBackTestStart"/>
+       </item>
+       <item row="12" column="1">
+        <widget class="QDateEdit" name="dedtBackTestEnd"/>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="0" column="2" rowspan="2">
+     <spacer name="horizontalSpacer_2">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>2</width>
+        <height>670</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="1" column="0">
+     <layout class="QGridLayout" name="gridLayout_4">
+      <item row="0" column="0">
+       <widget class="QLabel" name="lblTargetFile">
+        <property name="text">
+         <string>Target file</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="ledtTargetFile">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="lblTemplateFile">
+        <property name="text">
+         <string>Template file</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="ledtTemplateFile">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3">
+       <widget class="QComboBox" name="cmbTemplateFile">
+        <property name="editable">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3">
+       <widget class="QComboBox" name="cmbTargetFile">
+        <property name="editable">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QPushButton" name="btnTemplateFile">
+        <property name="text">
+         <string>...</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QPushButton" name="btnTargetFile">
+        <property name="text">
+         <string>...</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="2" column="0" colspan="2">
+     <spacer name="verticalSpacer_3">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>1075</width>
+        <height>28</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab_3">
+       <attribute name="title">
+        <string>IndexData</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_10">
+        <item row="0" column="0">
+         <widget class="QTableWidget" name="tblIndexData">
+          <property name="minimumSize">
+           <size>
+            <width>500</width>
+            <height>200</height>
+           </size>
+          </property>
+          <property name="editTriggers">
+           <set>QAbstractItemView::NoEditTriggers</set>
+          </property>
+          <property name="selectionBehavior">
+           <enum>QAbstractItemView::SelectRows</enum>
+          </property>
+          <property name="sortingEnabled">
+           <bool>true</bool>
+          </property>
+          <attribute name="horizontalHeaderVisible">
+           <bool>false</bool>
+          </attribute>
+          <attribute name="horizontalHeaderCascadingSectionResizes">
+           <bool>false</bool>
+          </attribute>
+          <attribute name="horizontalHeaderDefaultSectionSize">
+           <number>80</number>
+          </attribute>
+          <attribute name="horizontalHeaderHighlightSections">
+           <bool>true</bool>
+          </attribute>
+          <attribute name="verticalHeaderVisible">
+           <bool>false</bool>
+          </attribute>
+          <column>
+           <property name="text">
+            <string>ID</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Market</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Name</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Kind</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Open</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>High</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Low</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Close</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Volume</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>AClose</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Rate</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_4">
+       <attribute name="title">
+        <string>BackTest</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_11">
+        <item row="0" column="0">
+         <widget class="QTabWidget" name="tabWidget_2">
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <widget class="QWidget" name="tab_8">
+           <attribute name="title">
+            <string>Config</string>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout_18">
+            <item row="0" column="0">
+             <layout class="QGridLayout" name="gridLayout_17">
+              <item row="0" column="0">
+               <widget class="QGroupBox" name="grpMethodName">
+                <property name="title">
+                 <string>Method name</string>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_12">
+                 <item row="0" column="0">
+                  <widget class="QLineEdit" name="ledtMethodName"/>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QGroupBox" name="grpTestTerm">
+                <property name="title">
+                 <string>Test term</string>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_13">
+                 <item row="0" column="0">
+                  <widget class="QDateEdit" name="dedtTestTermStart"/>
+                 </item>
+                 <item row="0" column="1">
+                  <widget class="QLabel" name="label_2">
+                   <property name="text">
+                    <string>-</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="2">
+                  <widget class="QDateEdit" name="dedtTestTermEnd"/>
+                 </item>
+                 <item row="0" column="3">
+                  <spacer name="horizontalSpacer_6">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QGroupBox" name="grpBestConfig">
+                <property name="title">
+                 <string>Base config</string>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_15">
+                 <item row="0" column="0">
+                  <widget class="QCheckBox" name="cbxBestConfig_1">
+                   <property name="text">
+                    <string>株価の低い場合は取引しない</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="0">
+                  <widget class="QCheckBox" name="cbxBestConfig_2">
+                   <property name="text">
+                    <string>株価の高い場合は取引しない</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="0">
+                  <widget class="QCheckBox" name="cbxBestConfig_3">
+                   <property name="text">
+                    <string>売買代金の少ない場合は取引しない</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="3" column="0">
+                  <layout class="QGridLayout" name="gridLayout_14">
+                   <item row="0" column="0">
+                    <widget class="QLabel" name="lblBestConfig_1">
+                     <property name="text">
+                      <string>（売買代金の</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="QSpinBox" name="spnBestConfig_1">
+                     <property name="maximum">
+                      <number>1000</number>
+                     </property>
+                     <property name="value">
+                      <number>15</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="2">
+                    <widget class="QLabel" name="lblBestConfig_2">
+                     <property name="text">
+                      <string>日間平均が</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="3">
+                    <widget class="QSpinBox" name="spnBestConfig_2">
+                     <property name="maximum">
+                      <number>1000</number>
+                     </property>
+                     <property name="value">
+                      <number>50</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="4">
+                    <widget class="QLabel" name="lblBestConfig_3">
+                     <property name="text">
+                      <string>千万円以下の場合）</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="3" column="0">
+               <widget class="QGroupBox" name="grpSpecialConfig">
+                <property name="title">
+                 <string>Special config</string>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_16">
+                 <item row="0" column="0">
+                  <widget class="QCheckBox" name="cbxSpecialConfig_1">
+                   <property name="text">
+                    <string>Stop高/Stop安で取引ができない場合を考慮に入れる</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="0">
+                  <widget class="QCheckBox" name="cbxSpecialConfig_2">
+                   <property name="text">
+                    <string>保有中や待機中の場合は次の仕掛けをしない</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="0">
+                  <widget class="QCheckBox" name="cbxSpecialConfig_3">
+                   <property name="text">
+                    <string>仕掛けが翌日寄付、翌日指値（寄付）の場合は、その日の場中指値を許可する</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="0" column="1">
+             <spacer name="horizontalSpacer_5">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>489</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item row="1" column="0">
+             <spacer name="verticalSpacer_5">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>245</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tab_9">
+           <attribute name="title">
+            <string>TargetID</string>
+           </attribute>
+          </widget>
+          <widget class="QWidget" name="tab_10">
+           <attribute name="title">
+            <string>Entry</string>
+           </attribute>
+          </widget>
+          <widget class="QWidget" name="tab_11">
+           <attribute name="title">
+            <string>Exit</string>
+           </attribute>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_5">
+       <attribute name="title">
+        <string>BackTestReslt</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="tab_6">
+       <attribute name="title">
+        <string>BestPortfolio</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="tab_7">
+       <attribute name="title">
+        <string>BestPortfolioResult</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>DBData</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_5">
+        <item row="0" column="0">
+         <layout class="QGridLayout" name="gridLayout">
+          <item row="0" column="0">
+           <widget class="QLabel" name="lblTarget">
+            <property name="text">
+             <string>Target</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLabel" name="lblTemplate">
+            <property name="text">
+             <string>Template</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="Plot" name="qwtpltTarget" native="true">
+            <property name="minimumSize">
+             <size>
+              <width>500</width>
+              <height>400</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="Plot" name="qwtpltTemplate" native="true">
+            <property name="minimumSize">
+             <size>
+              <width>500</width>
+              <height>400</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QTableWidget" name="tblTarget">
+            <property name="minimumSize">
+             <size>
+              <width>500</width>
+              <height>200</height>
+             </size>
+            </property>
+            <attribute name="horizontalHeaderVisible">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="horizontalHeaderCascadingSectionResizes">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="horizontalHeaderDefaultSectionSize">
+             <number>80</number>
+            </attribute>
+            <attribute name="horizontalHeaderHighlightSections">
+             <bool>true</bool>
+            </attribute>
+            <attribute name="verticalHeaderVisible">
+             <bool>false</bool>
+            </attribute>
+            <column>
+             <property name="text">
+              <string>Date</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Open</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>High</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Low</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Close</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>AClose</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Volume</string>
+             </property>
+            </column>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QTableWidget" name="tblTemplate">
+            <property name="minimumSize">
+             <size>
+              <width>500</width>
+              <height>200</height>
+             </size>
+            </property>
+            <attribute name="horizontalHeaderVisible">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="horizontalHeaderCascadingSectionResizes">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="horizontalHeaderDefaultSectionSize">
+             <number>80</number>
+            </attribute>
+            <column>
+             <property name="text">
+              <string>Date</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Open</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>High</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Low</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Close</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>AClose</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Volume</string>
+             </property>
+            </column>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="0" column="1">
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="1" column="0">
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>ScoreData</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_9">
+        <item row="0" column="0">
+         <layout class="QGridLayout" name="gridLayout_2">
+          <item row="0" column="0">
+           <widget class="QLabel" name="lblBestCase">
+            <property name="text">
+             <string>BestCase</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLabel" name="lblWorstCase">
+            <property name="text">
+             <string>WorstCase</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QLabel" name="lblCenterCase">
+            <property name="text">
+             <string>CenterCase</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="Plot" name="qwtpltBestCase" native="true">
+            <property name="minimumSize">
+             <size>
+              <width>300</width>
+              <height>300</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="Plot" name="qwtpltWorstCase" native="true">
+            <property name="minimumSize">
+             <size>
+              <width>300</width>
+              <height>300</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="2">
+           <widget class="Plot" name="qwtpltCenterCase" native="true">
+            <property name="minimumSize">
+             <size>
+              <width>300</width>
+              <height>300</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="0" column="1">
+         <spacer name="horizontalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="1" column="0">
+         <layout class="QGridLayout" name="gridLayout_8">
+          <item row="0" column="0">
+           <layout class="QGridLayout" name="gridLayout_3">
+            <item row="0" column="0" colspan="2">
+             <widget class="QTableWidget" name="tblScore">
+              <property name="minimumSize">
+               <size>
+                <width>500</width>
+                <height>200</height>
+               </size>
+              </property>
+              <property name="alternatingRowColors">
+               <bool>false</bool>
+              </property>
+              <attribute name="horizontalHeaderVisible">
+               <bool>false</bool>
+              </attribute>
+              <attribute name="horizontalHeaderCascadingSectionResizes">
+               <bool>false</bool>
+              </attribute>
+              <attribute name="horizontalHeaderDefaultSectionSize">
+               <number>120</number>
+              </attribute>
+              <column>
+               <property name="text">
+                <string>TargetID</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>TemplateID</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>TemplateDate</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Score</string>
+               </property>
+              </column>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="0" column="1">
+           <widget class="QTableWidget" name="tblPrediction">
+            <property name="minimumSize">
+             <size>
+              <width>380</width>
+              <height>200</height>
+             </size>
+            </property>
+            <property name="alternatingRowColors">
+             <bool>false</bool>
+            </property>
+            <attribute name="horizontalHeaderVisible">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="horizontalHeaderCascadingSectionResizes">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="horizontalHeaderDefaultSectionSize">
+             <number>90</number>
+            </attribute>
+            <column>
+             <property name="text">
+              <string>Day</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Best Case</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Worst Case</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Center Case</string>
+             </property>
+            </column>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <spacer name="horizontalSpacer_4">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="0">
+         <spacer name="verticalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+       <zorder>verticalSpacer_2</zorder>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1254</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_File">
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <addaction name="mnuOpen"/>
+    <addaction name="mnuSave"/>
+    <addaction name="separator"/>
+    <addaction name="mnuEnd"/>
+   </widget>
+   <widget class="QMenu" name="menu_FA">
+    <property name="title">
+     <string>&amp;FA</string>
+    </property>
+    <widget class="QMenu" name="menu_Template">
+     <property name="title">
+      <string>&amp;Template</string>
+     </property>
+     <addaction name="mnuTemplateRestruct"/>
+     <addaction name="mnuTemplateAdd"/>
+    </widget>
+    <widget class="QMenu" name="menu_Target">
+     <property name="title">
+      <string>&amp;Target</string>
+     </property>
+     <addaction name="mnuTargetRestruct"/>
+    </widget>
+    <widget class="QMenu" name="menu_Predict">
+     <property name="title">
+      <string>&amp;Predict</string>
+     </property>
+     <addaction name="mnuCalculateScore"/>
+     <addaction name="mnuScoreFiltering"/>
+    </widget>
+    <addaction name="menu_Template"/>
+    <addaction name="menu_Target"/>
+    <addaction name="menu_Predict"/>
+   </widget>
+   <addaction name="menu_File"/>
+   <addaction name="menu_FA"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="mnuOpen">
+   <property name="text">
+    <string>&amp;Open</string>
+   </property>
+  </action>
+  <action name="mnuSave">
+   <property name="text">
+    <string>&amp;Save</string>
+   </property>
+  </action>
+  <action name="mnuEnd">
+   <property name="text">
+    <string>&amp;End</string>
+   </property>
+  </action>
+  <action name="mnuTemplateRestruct">
+   <property name="text">
+    <string>&amp;Restruct</string>
+   </property>
+  </action>
+  <action name="mnuTemplateAdd">
+   <property name="text">
+    <string>&amp;Add</string>
+   </property>
+  </action>
+  <action name="mnuTargetRestruct">
+   <property name="text">
+    <string>&amp;Restruct</string>
+   </property>
+  </action>
+  <action name="mnuCalculateScore">
+   <property name="text">
+    <string>&amp;CalculateScore</string>
+   </property>
+  </action>
+  <action name="mnuScoreFiltering">
+   <property name="text">
+    <string>ScoreFiltering</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>Plot</class>
+   <extends>QWidget</extends>
+   <header location="global">plot.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
